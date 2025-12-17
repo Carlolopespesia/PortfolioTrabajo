@@ -1,0 +1,730 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Carlos Alejandro López Rodríguez</title>
+    <style>
+        /* CSS INCRUSTADO PARA FACILITARTE LA COPIA */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #00bcd4;
+            /* Cian eléctrico */
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
+
+        /* Tipografía y Utilidades */
+        h1,
+        h2,
+        h3 {
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero */
+        header {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .tagline {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            padding: 10px 25px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: var(--bg-color);
+        }
+
+        /* Secciones Generales */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-list li {
+            background: var(--card-bg);
+            margin-bottom: 0.5rem;
+            padding: 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Proyectos Github */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .github-link {
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--text-muted);
+        }
+
+        .github-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="container">
+        <p style="color: var(--accent);">Hola, mi nombre es</p>
+        <h1>Carlos Alejandro López.</h1>
+        <div class="subtitle">Graduado en Física & Desarrollador.</div>
+        <p class="tagline">
+            Soy <b>Carlos López Rodríguez</b>, Graduado en Física por la Universidad Europea de Madrid , y actualmente
+            busco
+            aplicar mis competencias en el entorno laboral como Físico y Programador. Mi formación me ha proporcionado
+            sólidas <b>habilidades matemáticas, experimentales, creativas y analíticas</b> , incluyendo conocimientos
+            avanzados en Álgebra lineal, Análisis vectorial, Análisis real y Análisis estadístico. Actualmente,
+            amplío mi perfil técnico estudiando un Grado Superior en Desarrollo de Aplicaciones Multiplataforma
+            y un Máster en Análisis de datos , y manejo lenguajes como <b>Python y Java</b>, así como desarrollo web
+            con <b>HTML, CSS y JavaScript</b>. Mi trabajo se enfoca en proyectos de investigación como las simulaciones
+            en dosimetría del cáncer y el manejo de RAG de LLMS.
+        </p>
+        <a href="#projects" class="btn">Ver mis Proyectos</a>
+    </header>
+
+    <section id="skills" class="container">
+        <h2>01. Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Hard Skills</h3>
+                <ul class="skill-list">
+                    <li><span>Python (Data & Scripting)</span> <span>🐍</span></li>
+                    <li><span>JavaScript / ES6+</span> <span>JS</span></li>
+                    <li><span>Matemáticas & Análisis</span> <span>∫</span></li>
+                    <li><span>Git & GitHub</span> <span>🐙</span></li>
+                    <li><span>HTML5 & CSS3</span> <span>🎨</span></li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <ul class="skill-list">
+                    <li><span>Resolución de Problemas Complejos</span></li>
+                    <li><span>Pensamiento Analítico</span></li>
+                    <li><span>Adaptabilidad y Aprendizaje Rápido</span></li>
+                    <li><span>Trabajo en Equipo</span></li>
+                    <li><span>Comunicación Técnica</span></li>
+                </ul>
+                <br><br>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>02. Proyectos Destacados</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="tech-stack">Python • TensorFlow • Data Viz</div>
+                <h3>Simulación de Partículas</h3>
+                <p class="project-desc">
+                    Una simulación visual del comportamiento de gases ideales utilizando Python.
+                    Muestra gráficas en tiempo real sobre presión y temperatura.
+                </p>
+                <a href="#" class="github-link">Ver en GitHub &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <div class="tech-stack">React • Node.js • API REST</div>
+                <h3>Calculadora Científica Web</h3>
+                <p class="project-desc">
+                    Aplicación web progresiva (PWA) que permite realizar cálculos vectoriales
+                    y visualizar funciones en 3D directamente en el navegador.
+                </p>
+                <a href="#" class="github-link">Ver en GitHub &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <div class="tech-stack">JavaScript • D3.js • HTML/CSS</div>
+                <h3>Dashboard de Datos Climáticos</h3>
+                <p class="project-desc">
+                    Visualización interactiva de grandes volúmenes de datos climáticos,
+                    permitiendo filtrar por región y periodo temporal con alta eficiencia.
+                </p>
+                <a href="#" class="github-link">Ver en GitHub &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <div class="tech-stack">Python • Automation • Bots</div>
+                <h3>Automated Lab Reports</h3>
+                <p class="project-desc">
+                    Script que automatiza la limpieza de datos crudos de laboratorio
+                    y genera reportes PDF listos para presentar en LaTeX.
+                </p>
+                <a href="#" class="github-link">Ver en GitHub &rarr;</a>
+            </div>
+            <br><br><br><br>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Diseñado y Construido por Carlos Alejandro López Rodríguez.</p>
+        <p style="margin-top:10px;">
+            <a href="mailto:tuemail@ejemplo.com">Contactar</a> •
+            <a href="https://github.com/tuusuario">GitHub</a> •
+            <a href="https://linkedin.com/in/tuusuario">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Carlos Alejandro López Rodríguez</title>
+    <style>
+        /* =========================================
+           CONFIGURACIÓN DE COLORES Y MODO OSCURO/CLARO
+           ========================================= */
+        :root {
+            /* TEMA OSCURO (Por defecto) */
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #00bcd4;
+            /* Cian eléctrico */
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            /* Variables del botón toggle */
+            --toggle-bg: #2c2c2c;
+            --toggle-circle: #00bcd4;
+        }
+
+        /* LÓGICA MODO CLARO (Se activa al marcar el checkbox) */
+        body:has(#theme-toggle:checked) {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --accent: #008ba3;
+            /* Un cian un poco más oscuro para contraste en blanco */
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+            /* Cambios en el botón */
+            --toggle-bg: #e0e0e0;
+            --toggle-circle: #ff9f43;
+            /* Sol naranja */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* =========================================
+           BOTÓN FANCY (TOGGLE)
+           ========================================= */
+        /* Ocultamos el checkbox real */
+        #theme-toggle {
+            display: none;
+        }
+
+        /* El contenedor del botón */
+        .theme-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            height: 34px;
+            background: var(--toggle-bg);
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow: hidden;
+            border: 1px solid var(--text-muted);
+        }
+
+        /* Iconos de fondo (Sol y Luna) */
+        .theme-switch .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            user-select: none;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .theme-switch .icon.moon {
+            right: 8px;
+            opacity: 1;
+        }
+
+        .theme-switch .icon.sun {
+            left: 8px;
+            opacity: 0;
+            /* Oculto por defecto en modo oscuro */
+        }
+
+        /* El círculo que se mueve */
+        .theme-switch::after {
+            content: '';
+            width: 26px;
+            height: 26px;
+            background: var(--toggle-circle);
+            border-radius: 50%;
+            position: absolute;
+            left: 4px;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animación cuando está checked */
+        #theme-toggle:checked+.theme-switch::after {
+            transform: translateX(36px);
+        }
+
+        /* Cambiar visibilidad de iconos */
+        #theme-toggle:checked+.theme-switch .icon.moon {
+            opacity: 0;
+        }
+
+        #theme-toggle:checked+.theme-switch .icon.sun {
+            opacity: 1;
+        }
+
+
+        /* =========================================
+           RESTO DEL CSS ORIGINAL
+           ========================================= */
+        h1,
+        h2,
+        h3 {
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero */
+        header {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .tagline {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            padding: 10px 25px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 5px;
+            background: transparent;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: var(--bg-color) !important;
+            /* Forzar contraste */
+            font-weight: bold;
+        }
+
+        /* Secciones Generales */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--text-muted);
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-list li {
+            background: var(--card-bg);
+            margin-bottom: 0.5rem;
+            padding: 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            /* Sombra dinámica */
+        }
+
+        /* Proyectos Github */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .github-link {
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--text-muted);
+        }
+
+        .github-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--text-muted);
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="theme-toggle">
+
+    <label for="theme-toggle" class="theme-switch" title="Cambiar tema">
+        <span class="icon sun">☀️</span>
+        <span class="icon moon">🌙</span>
+    </label>
+
+    <header class="container">
+        <p style="color: var(--accent);">Hola, mi nombre es</p>
+        <h1>Carlos Alejandro López.</h1>
+        <div class="subtitle">Graduado en Física & Desarrollador.</div>
+        <p class="tagline">
+            Soy <b>Carlos López Rodríguez</b>, Graduado en Física por la Universidad Europea de Madrid , y actualmente
+            busco
+            aplicar mis competencias en el entorno laboral como Físico y Programador. Mi formación me ha proporcionado
+            sólidas <b>habilidades matemáticas, experimentales, creativas y analíticas</b> , incluyendo conocimientos
+            avanzados en Álgebra lineal, Análisis vectorial, Análisis real y Análisis estadístico. Actualmente,
+            amplío mi perfil técnico estudiando un Grado Superior en Desarrollo de Aplicaciones Multiplataforma
+            y un Máster en Análisis de datos , y manejo lenguajes como <b>Python y Java</b>, así como desarrollo web
+            con <b>HTML, CSS y JavaScript</b>. Mi trabajo se enfoca en proyectos de investigación como las simulaciones
+            en dosimetría del cáncer y el manejo de RAG de LLMS.
+        </p>
+        <a href="./cv.pdf" class="btn">Descargar CV</a>
+    </header>
+
+    <section id="skills" class="container">
+        <h2>01. Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Hard Skills</h3>
+                <ul class="skill-list">
+                    <li><span>Python (Data & Scripting)</span> <span>🐍</span></li>
+                    <li><span>JavaScript / ES6+</span> <span>JS</span></li>
+                    <li><span>Matemáticas & Análisis</span> <span>∫</span></li>
+                    <li><span>Git & GitHub</span> <span>🐙</span></li>
+                    <li><span>HTML5 & CSS3</span> <span>🎨</span></li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <ul class="skill-list">
+                    <li><span>Resolución de Problemas Complejos</span></li>
+                    <li><span>Pensamiento Analítico</span></li>
+                    <li><span>Adaptabilidad y Aprendizaje Rápido</span></li>
+                    <li><span>Trabajo en Equipo</span></li>
+                    <li><span>Comunicación Técnica</span></li>
+                </ul>
+                <br><br>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>02. Proyectos Destacados</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="tech-stack">Python</div>
+                <h3>Simulación de Partículas</h3>
+                <p class="project-desc">
+                    Análisis y aplicación computacional de métodos experimentales en la radioterapia para optimizar la
+                    dosimetría
+                </p>
+                <a href="https://github.com/Carlolopespesia/Trabajo-Fin-de-Grado.git" class="github-link">Ver en GitHub
+                    &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <div class="tech-stack">Python</div>
+                <h3>RAG de LLMs</h3>
+                <p class="project-desc">
+                    Creación de un sistema RAG local con Mistral AI y LangChain para conversar sobre el contenido de
+                    archivos PDF.
+                </p>
+                <a href="https://github.com/Carlolopespesia/C-digo-pr-cticas-universitarias.git" class="github-link">Ver
+                    en GitHub &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <div class="tech-stack">Python • SQL</div>
+                <h3>Máster de Análisis de Datos</h3>
+                <p class="project-desc">
+                    Distintos proyectos de Análisis de Datos (estadística, dashboards, cuadernos jupyter...). Se
+                    demuestra todo el conocimiento en un proyecto final. </p>
+                <a href="https://github.com/Carlolopespesia/Master-on-Data-Analytics.git" class="github-link">Ver en
+                    GitHub &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <div class="tech-stack">Java</div>
+                <h3>Videojuego de piratas ARGH</h3>
+                <p class="project-desc">
+                    Juego de Rol a través de terminal, decisiones propias y eventos misceláneos.
+                    Manejo múltiples de clases y herencia.
+                </p>
+                <a href="https://github.com/AdrianMedinaVidera/-Argh-.git" class="github-link">Ver en GitHub &rarr;</a>
+            </div>
+            <br><br><br><br>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Diseñado y Construido por Carlos Alejandro López Rodríguez.</p>
+        <p style="margin-top:10px;">
+            <a href="mailto:7velilla@gmail.com">Contactar</a> •
+            <a href="https://github.com/Carlolopespesia">GitHub</a> •
+            <a href="https://www.linkedin.com/in/carlosalejandrolkin/">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
